@@ -11,9 +11,19 @@ var vows = require('vows'),
 
 vows.describe('basic').addBatch({
     'TrainDestination': {
-        topic: TrainDestination,
-        'is undefined': function(topic) {
-            assert.equal(topic, undefined);
+        topic: function() {
+        	return TrainDestination;
+        },
+        'is function': function(topic) {
+            assert.strictEqual(typeof topic, 'function');
+        },
+    },
+    'new TrainDestination(\'Denver\')': {
+        topic: function() {
+        	return new TrainDestination('Denver');
+        },
+        '.name === \'Denver\'': function(denver) {
+            assert.strictEqual(denver.name, 'Denver');
         },
     }
 }).export(module);
