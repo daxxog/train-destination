@@ -9,11 +9,11 @@ Install
 -------
 stable
 ```bash
-npm install -g train-destination
+npm install train-destination
 ```
 edge
 ```bash
-npm install -g https://github.com/daxxog/train-destination/tarball/master
+npm install https://github.com/daxxog/train-destination/tarball/master
 ```
 
 [travis-image]: https://img.shields.io/travis/daxxog/train-destination.png?branch=master
